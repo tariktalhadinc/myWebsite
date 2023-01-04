@@ -54,6 +54,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Yetenekler">
     <Key>
@@ -72,6 +73,7 @@
     <EntitySet Name="Sertifikalars" EntityType="Self.Sertifikalar" />
     <EntitySet Name="Yeteneklers" EntityType="Self.Yetenekler" />
     <EntitySet Name="Hakkimdas" EntityType="myWebsiteModel.Hakkimda" />
+    <EntitySet Name="SosyalMedyas" EntityType="myWebsiteModel.SosyalMedya" />
   </EntityContainer>
   <EntityType Name="Hakkimda">
     <Key>
@@ -85,5 +87,15 @@
     <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Durum" Type="Boolean" />
   </EntityType>
 </Schema>

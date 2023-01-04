@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="myWebsiteModel.Sertifikalar" Width="1.5" PointX="4" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="myWebsiteModel.Yetenekler" Width="1.5" PointX="5.875" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="myWebsiteModel.Hakkimda" Width="1.5" PointX="5.75" PointY="2.25" />
+        <EntityTypeShape EntityType="myWebsiteModel.SosyalMedya" Width="1.5" PointX="7.75" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

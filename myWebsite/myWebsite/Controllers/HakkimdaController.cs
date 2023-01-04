@@ -1,4 +1,6 @@
-﻿using System;
+﻿using myWebsite.Models.Entitiy;
+using myWebsite.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +11,28 @@ namespace myWebsite.Controllers
     public class HakkimdaController : Controller
     {
         // GET: Hakkimda
+        myWebsiteEntities db = new myWebsiteEntities();
+        GenericRepository<Hakkimda> repo = new GenericRepository<Hakkimda>();
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            var hakkimda = repo.List();
+            return View(hakkimda);
+        }
+        [HttpPost]
+        public ActionResult Index(Hakkimda p)
+        {
+            /*Hobilerim t = new Hobilerim();*/
+            var t = repo.Find(x => x.ID == 1);
+            t.Ad = p.Ad;
+            t.Soyad = p.Soyad;
+            t.Adres = p.Adres;
+            t.Telefon= p.Telefon;
+            t.Mail= p.Mail;
+            t.Aciklama= p.Aciklama;
+            t.Resim = p.Resim;
+            repo.TUpdate(t);
+            return RedirectToAction("Index");
         }
     }
 }

@@ -57,6 +57,7 @@
     <EntitySetMapping Name="Sertifikalars">
       <EntityTypeMapping TypeName="myWebsiteModel.Sertifikalar">
         <MappingFragment StoreEntitySet="Sertifikalar">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
         </MappingFragment>
@@ -80,6 +81,17 @@
           <ScalarProperty Name="Telefon" ColumnName="Telefon" />
           <ScalarProperty Name="Adres" ColumnName="Adres" />
           <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SosyalMedyas">
+      <EntityTypeMapping TypeName="myWebsiteModel.SosyalMedya">
+        <MappingFragment StoreEntitySet="SosyalMedya">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>

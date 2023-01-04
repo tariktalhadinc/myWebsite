@@ -72,6 +72,17 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Aciklama" Type="varchar" MaxLength="250" />
+          <Property Name="Tarih" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="SosyalMedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="varchar" MaxLength="30" />
+          <Property Name="Link" Type="varchar" MaxLength="50" />
+          <Property Name="Icon" Type="varchar" MaxLength="50" />
+          <Property Name="Durum" Type="bit" />
         </EntityType>
         <EntityType Name="Yetenekler">
           <Key>
@@ -89,6 +100,7 @@
           <EntitySet Name="Hobilerim" EntityType="Self.Hobilerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Iletisim" EntityType="Self.Iletisim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sertifikalar" EntityType="Self.Sertifikalar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SosyalMedya" EntityType="Self.SosyalMedya" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Yetenekler" EntityType="Self.Yetenekler" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -149,6 +161,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Yetenekler">
           <Key>
@@ -167,6 +180,7 @@
           <EntitySet Name="Sertifikalars" EntityType="Self.Sertifikalar" />
           <EntitySet Name="Yeteneklers" EntityType="Self.Yetenekler" />
           <EntitySet Name="Hakkimdas" EntityType="myWebsiteModel.Hakkimda" />
+          <EntitySet Name="SosyalMedyas" EntityType="myWebsiteModel.SosyalMedya" />
         </EntityContainer>
         <EntityType Name="Hakkimda">
           <Key>
@@ -180,6 +194,16 @@
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SosyalMedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -243,6 +267,7 @@
           <EntitySetMapping Name="Sertifikalars">
             <EntityTypeMapping TypeName="myWebsiteModel.Sertifikalar">
               <MappingFragment StoreEntitySet="Sertifikalar">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
               </MappingFragment>
@@ -266,6 +291,17 @@
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="Adres" ColumnName="Adres" />
                 <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SosyalMedyas">
+            <EntityTypeMapping TypeName="myWebsiteModel.SosyalMedya">
+              <MappingFragment StoreEntitySet="SosyalMedya">
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

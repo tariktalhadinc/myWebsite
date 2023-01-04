@@ -132,7 +132,11 @@
     <Compile Include="Controllers\DeneyimController.cs" />
     <Compile Include="Controllers\EgitimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
+    <Compile Include="Controllers\HobiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\SertifikaController.cs" />
+    <Compile Include="Controllers\SosyalMedyaController.cs" />
     <Compile Include="Controllers\YetenekController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,6 +175,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Entitiy\Sertifikalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entitiy\SosyalMedya.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entitiy\Yetenekler.cs">
@@ -2350,6 +2357,16 @@
     <Content Include="Views\Yetenek\YeniYetenek.cshtml" />
     <Content Include="Views\Yetenek\YetenekDüzenle.cshtml" />
     <Content Include="Views\Egitim\Index.cshtml" />
+    <Content Include="Views\Egitim\EgitimEkle.cshtml" />
+    <Content Include="Views\Egitim\EgitimDuzenle.cshtml" />
+    <Content Include="Views\Sertifika\Index.cshtml" />
+    <Content Include="Views\Sertifika\SertifikaGetir.cshtml" />
+    <Content Include="Views\Sertifika\YeniSertifika.cshtml" />
+    <Content Include="Views\Iletisim\Index.cshtml" />
+    <Content Include="Views\Hobi\Index.cshtml" />
+    <Content Include="Views\Default\SosyalMedya.cshtml" />
+    <Content Include="Views\SosyalMedya\Index.cshtml" />
+    <Content Include="Views\SosyalMedya\SayfaGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

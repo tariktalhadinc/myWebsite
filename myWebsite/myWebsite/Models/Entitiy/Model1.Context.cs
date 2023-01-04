@@ -33,5 +33,6 @@ namespace myWebsite.Models.Entitiy
         public virtual DbSet<Sertifikalar> Sertifikalars { get; set; }
         public virtual DbSet<Yetenekler> Yeteneklers { get; set; }
         public virtual DbSet<Hakkimda> Hakkimdas { get; set; }
+        public virtual DbSet<SosyalMedya> SosyalMedyas { get; set; }
     }
 }

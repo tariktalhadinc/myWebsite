@@ -67,6 +67,17 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Aciklama" Type="varchar" MaxLength="250" />
+    <Property Name="Tarih" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="SosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="30" />
+    <Property Name="Link" Type="varchar" MaxLength="50" />
+    <Property Name="Icon" Type="varchar" MaxLength="50" />
+    <Property Name="Durum" Type="bit" />
   </EntityType>
   <EntityType Name="Yetenekler">
     <Key>
@@ -84,6 +95,7 @@
     <EntitySet Name="Hobilerim" EntityType="Self.Hobilerim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Iletisim" EntityType="Self.Iletisim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Sertifikalar" EntityType="Self.Sertifikalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SosyalMedya" EntityType="Self.SosyalMedya" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Yetenekler" EntityType="Self.Yetenekler" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

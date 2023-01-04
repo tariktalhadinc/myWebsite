@@ -16,7 +16,11 @@ namespace myWebsite.Controllers
             var degerler = db.Hakkimdas.ToList();
             return View(degerler);
         }
-
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalmedya = db.SosyalMedyas.Where(x => x.Durum == true).ToList();
+            return PartialView(sosyalmedya);
+        }
         public PartialViewResult Deneyim()
         {
             var deneyimler = db.Deneyimlers.ToList();

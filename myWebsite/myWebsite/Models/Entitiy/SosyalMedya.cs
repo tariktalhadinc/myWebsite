@@ -12,10 +12,12 @@ namespace myWebsite.Models.Entitiy
     using System;
     using System.Collections.Generic;
     
-    public partial class Sertifikalar
+    public partial class SosyalMedya
     {
         public int ID { get; set; }
-        public string Aciklama { get; set; }
-        public string Tarih { get; set; }
+        public string Ad { get; set; }
+        public string Link { get; set; }
+        public string Icon { get; set; }
+        public Nullable<bool> Durum { get; set; }
     }
 }
