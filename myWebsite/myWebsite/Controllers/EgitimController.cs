@@ -8,10 +8,12 @@ using System.Web.Mvc;
 
 namespace myWebsite.Controllers
 {
+
     public class EgitimController : Controller
     {
         GenericRepository<Eğitimlerim> repo = new GenericRepository<Eğitimlerim>();
 
+        
         public ActionResult Index()
         {
             var egitim = repo.List();
