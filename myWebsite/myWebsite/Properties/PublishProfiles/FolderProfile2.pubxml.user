@@ -4,9 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\t.dinc\Desktop\Website\Website1</_PublishTargetUrl>
-    <History>True|2023-01-12T07:54:22.3224385Z;</History>
-    <LastFailureDetails />
+    <_PublishTargetUrl>C:\Users\t.dinc\Desktop\Website\myWebsite</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminLTE-3.0.4/.babelrc">
@@ -6295,10 +6293,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/27/2022 23:39:10</publishTime>
     </File>
     <File Include="bin/myWebsite.dll">
-      <publishTime>01/12/2023 10:54:37</publishTime>
+      <publishTime>01/12/2023 10:55:54</publishTime>
     </File>
     <File Include="bin/myWebsite.pdb">
-      <publishTime>01/12/2023 10:54:37</publishTime>
+      <publishTime>01/12/2023 10:55:54</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>04/22/2019 01:06:16</publishTime>
@@ -7039,7 +7037,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/03/2023 15:47:49</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/05/2023 18:30:25</publishTime>
+      <publishTime>01/12/2023 10:55:56</publishTime>
     </File>
   </ItemGroup>
 </Project>
